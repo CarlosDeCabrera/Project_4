@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% block content %}
+
+  <header id="hero" class="hero">
+    <div class="flex-container w-container">
+      <div>
+        <h1>Add an expense</h1>
+        <a href="{{ url_for('addExpenses') }}" class="button-8 w-button">Add an Expense</a>
+      </div>
+    </div>
+  </header>
+<section id="feature-section" class="feature-section">
+    <div class="flex-container w-container">
+      <div>
+        <h2>Track your expenses</h2>
+
+        <p> Your Total Expenses are : ${{expenses}} dollars</p>
+
+        <h2>By category</h2>
+        <p>
+          You wasted a total of {{expenses}} dollars in Electric Cars
+        </p>
+        <p>
+          You wasted a total of {{expenses}} dollars in Rocket Fuel
+        </p>
+        <p>
+          You wasted a total of {{expenses}} dollars in going to Mars
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
